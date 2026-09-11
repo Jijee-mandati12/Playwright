@@ -14,12 +14,13 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+  retries:1,
   /* Run tests in files in parallel */
   
-  reporter: 'html',
+ 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    
+    baseURL: "https://eventhub.rahulshettyacademy.com",
   },
 
   /* Configure projects for major browsers */
@@ -29,7 +30,11 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+
 
   ]
 });
