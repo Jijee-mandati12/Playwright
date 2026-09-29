@@ -2,27 +2,36 @@
 
 import{test,expect,request} from '@playwright/test'
 const loginPayload={email: "mandatijijee8@gmail.com", password: "Playwright@12"}
+const bookingPayload={customerEmail:"mandatijijee8@gmail.com",customerName: "Rams",customerPhone:"+7573168434",eventId:283,quantity:1}
+let booking1: {
+    
+    bookingReference: string;
+    eventTitle: string;
+    ticketCount: number;
+    totalText: string;
+    customerEmail: string;
+  };
 //declare token as global
 let token:string
 
-//customer details
-const customerDetails = {
-  name: "Rams",
-  email: "mandatijijee8@gmail.com",
-  phone: "0573168434"
-};
-// Declared as direct object types using type aliases instead of interfaces
-type BookingPayload = {
-  id?: string;
-  bookingReference: string;
-  eventTitle: string;
-  ticketCount: number;
-  totalText: string;
-  customerEmail: string;
-};
+// //customer details
+// const customerDetails = {
+//   name: "Rams",
+//   email: "mandatijijee8@gmail.com",
+//   phone: "0573168434"
+// };
+// // Declared as direct object types using type aliases instead of interfaces
+// type BookingPayload = {
+//   id?: string;
+//   bookingReference: string;
+//   eventTitle: string;
+//   ticketCount: number;
+//   totalText: string;
+//   customerEmail: string;
+// };
 
-let booking1: BookingPayload;
-let booking2: BookingPayload;
+// let booking1: BookingPayload;
+// let booking2: BookingPayload;
 
 test.beforeAll(async()=>{
     //LOGIN API
@@ -41,41 +50,40 @@ const loginResponseJson=await loginResponse.json()
 token=loginResponseJson.token;
 console.log(`token: ${token}`)
 
-// Header helper for authenticated requests
-  const authHeaders = {
-   'Authorization': `Bearer ${token}`,
-    'Accept': 'application/json, text/plain, */*',
-    'Content-Type': 'application/json'
-  };
-  // 2. CREATE FIRST BOOKING VIA API (Hyderabad - Conference - "World", Qty 1)
-  const eventsResp1 = await apiContext.get("https://api.eventhub.rahulshettyacademy.com/api/events?category=Conference&location=Hyderabad&search=World", {
-    headers: authHeaders
-  });
-    //World Tech Summit event filtered
-  const eventsData1 = await eventsResp1.json();
-  const event1 = eventsData1.data ? eventsData1.data[0] : eventsData1[0];
-  const event1title=event1.title
- // console.log(`Events displayed : ${event1title}`)
 
- //Booking World Tech Summit event
- const createBookingResp1 = await apiContext.post("https://api.eventhub.rahulshettyacademy.com/api/bookings", {
-   headers: authHeaders,
-  data: {
-    eventId: event1.id,
-    quantity: 1,
-    customerName: "test",
-    customerEmail: "mandatijijee8@mail.com",
-    customerPhone: "7573168434"
-  }
+//new api context for creting order
+const booking1Response=await apiContext.post("https://api.eventhub.rahulshettyacademy.com/api/bookings",
+    {
+      data:bookingPayload,
+      headers:{
+        'Authorization' : `Bearer ${token}`,
+        'Content-Type' :'application/json'
+      },
+
+    })
+    //parse response json
+
+const booking1ResponseJson=await booking1Response.json()
+const b1data=booking1ResponseJson.data
+//console.log(b1data)
+//Q2:Capture Booking1 required data event title, booking reference, ticket count, total text, and customer email
+booking1={
+     eventTitle:b1data.event.title,
+bookingReference:b1data.bookingRef,
+ticketCount:b1data.quantity,
+totalText: b1data.totalPrice,
+customerEmail:b1data.customerEmail
+
+
+ }
+//console.log("booking1 data:", booking1)
+//Q3 : Confirm the first event title is World Tech Summit, the booking reference is non-empty, and the ticket count is 1
+expect(booking1.eventTitle).toContain('World Tech Summit')
+expect(booking1.bookingReference).not.toBe("")
+expect(booking1.ticketCount).toBe(1)
 })
 
 
-if (!createBookingResp1.ok()) {
-  console.log("Booking 1 Error Body:", await createBookingResp1.text());
-}
-
-expect(createBookingResp1.ok()).toBeTruthy();
-})
 
 test("Validate EventHub Multiple Events booking", async ({ page }) => {
 
