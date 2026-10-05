@@ -57,9 +57,8 @@ test("Validate EventHub Events", async ({ page }) => {
     await expect(page).toHaveURL(/events/)
     const bookingHeading = page.getByRole('heading', { name: 'World Tech Summit' })
     await expect(bookingHeading).toHaveText(eventTitle)
-    const bookingPrice = page.locator(".text-sm.text-gray-800.font-medium").nth(5)
-    // console.log(bookingPrice)
-    await expect(bookingPrice).toContainText(eventPrice)
+    const bookingPrice = page.getByText(eventPrice, { exact: true });
+    await expect(bookingPrice).toBeVisible();
 
     //Q9Return back to events page ,clear filters and validated 3 events cards are visable
 

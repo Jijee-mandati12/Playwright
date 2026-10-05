@@ -171,7 +171,8 @@ test('patches one live booking in the list and matching detail response', async 
 	if (!originalDetailEmail) {
 		throw new Error('The live booking detail response did not include a customer email.');
 	}
-	await expect(page.getByText(originalDetailEmail, { exact: true })).toBeVisible();
+	const customerEmailRow = page.getByText('Email', { exact: true }).locator('..');
+	await expect(customerEmailRow).toContainText(originalDetailEmail);
 
 	const ticketsRow = page.getByText('Tickets', { exact: true }).locator('..');
 	await expect(ticketsRow).toContainText('7');
