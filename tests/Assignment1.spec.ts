@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test')
+import { test, expect } from '@playwright/test';
 //Core Playwright manage browser by explicitly launch or close browser where as playwright test runner end to end testing 
 //like fixtures,isolated,test,assertions 
 const url = "https://eventhub.rahulshettyacademy.com"

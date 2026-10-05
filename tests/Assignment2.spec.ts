@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test')
+import { test, expect } from '@playwright/test';
 
 
 test.describe("Evenhub smoke suite", () => {
@@ -20,7 +20,7 @@ test.describe("Evenhub smoke suite", () => {
     })
 
     //use built in page fixture and isolated browser context
-    test.only("Validate by using page fixture and isolated browser context",async({page,browser})=>{
+    test("Validate by using page fixture and isolated browser context",async({page,browser})=>{
 
        // 1. Use built-in page fixture to open login page and fill email field
     await page.goto('/login');

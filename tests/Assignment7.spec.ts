@@ -1,16 +1,13 @@
-const { test, expect, request } = require('@playwright/test');
+import { test, expect, request } from '@playwright/test';
+import { appUrl, apiBaseUrl, eventHubCredentials } from './support/eventhub';
 
-const appUrl = 'https://eventhub.rahulshettyacademy.com';
-const apiBaseUrl = 'https://api.eventhub.rahulshettyacademy.com/api';
-const eventHubEmail = 'mandatijijee8@gmail.com';
-const eventHubPassword = 'Playwright@12';
 const customer = {
 	name: 'Playwright API Lifecycle',
 	email: 'playwright.api.lifecycle@example.com',
 	phone: '+15555550123'
 };
 
-function formatCurrency(amount) {
+function formatCurrency(amount: number) {
 	return new Intl.NumberFormat('en-US', {
 		style: 'currency',
 		currency: 'USD',
@@ -28,7 +25,7 @@ test('creates, verifies, and cancels a runtime-selected event booking', async ({
 		// Question 1: Log in through the API and retain the token for authenticated calls and browser storage.
 		apiContext = await request.newContext();
 		const loginResponse = await apiContext.post(`${apiBaseUrl}/auth/login`, {
-			data: { email: eventHubEmail, password: eventHubPassword }
+			data: { email: eventHubCredentials.email, password: eventHubCredentials.password }
 		});
 		expect(loginResponse.ok(), 'EventHub API login should succeed').toBeTruthy();
 		const loginData = await loginResponse.json();
@@ -110,7 +107,7 @@ test('creates, verifies, and cancels a runtime-selected event booking', async ({
 		expect(Number(referenceData.totalPrice)).toBe(booking.totalPrice);
 
 		// Question 6: Seed the token before the first app navigation, then open My Bookings.
-		await page.addInitScript(token => {
+		await page.addInitScript((token: string) => {
 			window.localStorage.setItem('eventhub_token', token);
 		}, accessToken);
 		await page.goto(appUrl);

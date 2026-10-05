@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { loginToEventHub } from './support/eventhub';
 
 test.describe('Assignment 4 - Multi-Booking Web UI Flow', () => {
 
@@ -24,12 +25,7 @@ test.describe('Assignment 4 - Multi-Booking Web UI Flow', () => {
     // ==========================================
     // 1. SIGN IN & CREATE FIRST BOOKING VIA UI
     // ==========================================
-    await page.goto('https://eventhub.rahulshettyacademy.com/login');
-
-    // Fill credentials and log in
-    await page.getByPlaceholder('you@email.com').fill('mandatijijee8@gmail.com');
-    await page.locator('input[type="password"]').fill('YourPassword123!'); // Replace with valid password
-    await page.getByRole('button', { name: 'Sign In' }).click();
+    await loginToEventHub(page);
 
     // Navigate to Events catalog
     await page.getByRole('link', { name: 'Events' }).click();

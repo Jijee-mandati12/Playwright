@@ -1,12 +1,19 @@
 const { chromium } = require('@playwright/test');
+require('dotenv').config();
 
 (async () => {
+  const email = process.env.EVENTHUB_EMAIL;
+  const password = process.env.EVENTHUB_PASSWORD;
+  if (!email || !password) {
+    throw new Error('Set EVENTHUB_EMAIL and EVENTHUB_PASSWORD in .env before running this script.');
+  }
+
   const browser = await chromium.launch({ headless: false });
   const page = await browser.newPage();
 
   await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
-  await page.locator('input[name="username"]').fill('mandatijijee8@gmail.com');
-  await page.locator('input[name="password"]').fill('Playwright@12');
+  await page.locator('input[name="username"]').fill(email);
+  await page.locator('input[name="password"]').fill(password);
   await page.locator('input[type="checkbox"]').check();
   await page.locator('input[value="Sign In"]').click();
 

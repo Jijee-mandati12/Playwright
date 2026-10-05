@@ -1,19 +1,10 @@
-const { test, expect } = require('@playwright/test')
+import { test, expect } from '@playwright/test';
+import { loginToEventHub } from './support/eventhub';
 
 test("Validate EventHub Events", async ({ page }) => {
 
-    //1. Launch EventHub URl
-    await page.goto("https://eventhub.rahulshettyacademy.com")
-
-    //login page locators
-    const emailField = page.getByPlaceholder("you@email.com")
-    const password = page.getByRole('textbox', { name: "Password" })
-    const signInButton = page.getByRole('button', { name: 'Sign In' })
-
     //Q1:sign into EventHub portal
-    await emailField.fill('mandatijijee8@gmail.com')
-    await password.fill('Playwright@12')
-    await signInButton.click()
+    await loginToEventHub(page);
 
     //click on Events menu link
     const event = page.getByRole('link', { name: "Events", exact: true })

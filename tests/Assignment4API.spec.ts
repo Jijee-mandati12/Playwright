@@ -1,8 +1,9 @@
 
 
 import{test,expect,request} from '@playwright/test'
-const loginPayload={email: "mandatijijee8@gmail.com", password: "Playwright@12"}
-const bookingPayload={customerEmail:"mandatijijee8@gmail.com",customerName: "Rams",customerPhone:"+7573168434",eventId:283,quantity:1}
+import { eventHubCredentials } from './support/eventhub';
+const loginPayload = eventHubCredentials;
+const bookingPayload={customerEmail:eventHubCredentials.email,customerName: "Rams",customerPhone:"+7573168434",eventId:283,quantity:1}
 let booking1: {
     
     bookingReference: string;
@@ -14,12 +15,6 @@ let booking1: {
 //declare token as global
 let token:string
 
-// //customer details
-// const customerDetails = {
-//   name: "Rams",
-//   email: "mandatijijee8@gmail.com",
-//   phone: "0573168434"
-// };
 // // Declared as direct object types using type aliases instead of interfaces
 // type BookingPayload = {
 //   id?: string;
@@ -48,7 +43,6 @@ expect(( loginResponse).ok()).toBeTruthy()
 const loginResponseJson=await loginResponse.json()
 // Extract token 
 token=loginResponseJson.token;
-console.log(`token: ${token}`)
 
 
 //new api context for creting order
