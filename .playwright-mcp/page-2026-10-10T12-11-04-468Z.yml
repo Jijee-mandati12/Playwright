@@ -1,0 +1,124 @@
+- generic [ref=e278]:
+  - navigation [ref=e280]:
+    - generic [ref=e282]:
+      - link "Automation Automation Practice":
+        - /url: ""
+        - generic [ref=e283] [cursor=pointer]:
+          - heading "Automation" [level=3] [ref=e284]
+          - paragraph [ref=e285]: Automation Practice
+    - text: 
+    - link "🎯 I'll help you prepare for your next QA job — Explore the QA Career Accelerator." [ref=e286] [cursor=pointer]:
+      - /url: https://rahulshettyacademy.com/qa-career-accelerator-job-ready
+    - list [ref=e287]:
+      - listitem [ref=e288] [cursor=pointer]:
+        - button " HOME" [ref=e289]:
+          - generic [ref=e290]: 
+          - text: HOME
+      - listitem
+      - listitem [ref=e291] [cursor=pointer]:
+        - button " ORDERS" [ref=e292]:
+          - generic [ref=e293]: 
+          - text: ORDERS
+      - listitem [ref=e294] [cursor=pointer]:
+        - button " Cart 2" [ref=e295]:
+          - generic [ref=e296]: 
+          - text: Cart
+          - generic [ref=e297]: "2"
+      - listitem [ref=e298] [cursor=pointer]:
+        - button "Sign Out" [ref=e299]:
+          - generic [aria-hidden] [ref=e300]: 
+          - text: Sign Out
+  - generic [ref=e303]:
+    - generic [ref=e304]:
+      - generic [ref=e307]:
+        - generic [ref=e308]: ADIDAS ORIGINAL
+        - generic [ref=e309]: $ 11500
+        - generic [ref=e310]: "Quantity: 1"
+        - list [ref=e312]:
+          - listitem [ref=e313]: Apple phone
+      - generic [ref=e316]:
+        - generic [ref=e317]: ZARA COAT 3
+        - generic [ref=e318]: $ 11500
+        - generic [ref=e319]: "Quantity: 1"
+        - list [ref=e321]:
+          - listitem [ref=e322]: Apple phone
+    - generic [ref=e325]:
+      - generic [ref=e326]: Payment Method
+      - generic [ref=e327]:
+        - generic [ref=e328] [cursor=pointer]: Credit Card
+        - generic [ref=e329] [cursor=pointer]: Paypal
+        - generic [ref=e330] [cursor=pointer]: SEPA
+        - generic [ref=e331] [cursor=pointer]: Invoice
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - generic [ref=e334]: Personal Information
+          - generic [ref=e336]:
+            - generic [ref=e338]:
+              - generic [ref=e339]: Credit Card Number
+              - textbox [ref=e340]: 4542 9931 9292 2293
+            - generic [ref=e341]:
+              - generic [ref=e342]:
+                - generic [ref=e343]: Expiry Date
+                - combobox [ref=e344]:
+                  - option "01"
+                  - option "02"
+                  - option "03"
+                  - option "04"
+                  - option "05"
+                  - option "06"
+                  - option "07"
+                  - option "08"
+                  - option "09"
+                  - option "10"
+                  - option "11"
+                  - option "12" [selected]
+                - combobox [ref=e345]:
+                  - option "01"
+                  - option "02"
+                  - option "03"
+                  - option "04"
+                  - option "05"
+                  - option "06"
+                  - option "07"
+                  - option "08"
+                  - option "09"
+                  - option "10"
+                  - option "11"
+                  - option "12"
+                  - option "13"
+                  - option "14"
+                  - option "15"
+                  - option "16"
+                  - option "17"
+                  - option "18"
+                  - option "19"
+                  - option "20"
+                  - option "21"
+                  - option "22"
+                  - option "23"
+                  - option "24"
+                  - option "25"
+                  - option "26"
+                  - option "27"
+                  - option "28"
+                  - option "29"
+                  - option "30" [selected]
+                  - option "31"
+              - generic [ref=e346]:
+                - generic [ref=e347]: CVV Code ?
+                - textbox [ref=e348]: "123"
+            - generic [ref=e350]:
+              - generic [ref=e351]: Name on Card
+              - textbox [ref=e352]: QA Practice Tester
+            - generic [ref=e353]:
+              - generic [ref=e354]:
+                - generic [ref=e355]: Apply Coupon
+                - textbox [ref=e356]
+              - button "Apply Coupon" [ref=e359] [cursor=pointer]
+        - generic [ref=e360]:
+          - generic [ref=e361]: Shipping Information
+          - generic [ref=e363]:
+            - generic [ref=e364]: mandatijijee8@gmail.com
+            - textbox [ref=e365]: mandatijijee8@gmail.com
+            - textbox "Select Country" [active] [ref=e368]: Ind
+            - generic [ref=e369]: Place Order

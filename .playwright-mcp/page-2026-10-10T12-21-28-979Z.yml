@@ -1,0 +1,72 @@
+- generic [ref=e214]:
+  - navigation [ref=e216]:
+    - generic [ref=e218]:
+      - link "Automation Automation Practice":
+        - /url: ""
+        - generic [ref=e219] [cursor=pointer]:
+          - heading "Automation" [level=3] [ref=e220]
+          - paragraph [ref=e221]: Automation Practice
+    - text: 
+    - link "🎯 I'll help you prepare for your next QA job — Explore the QA Career Accelerator." [ref=e222] [cursor=pointer]:
+      - /url: https://rahulshettyacademy.com/qa-career-accelerator-job-ready
+    - list [ref=e223]:
+      - listitem [ref=e224] [cursor=pointer]:
+        - button " HOME" [ref=e225]:
+          - generic [ref=e226]: 
+          - text: HOME
+      - listitem
+      - listitem [ref=e227] [cursor=pointer]:
+        - button " ORDERS" [ref=e228]:
+          - generic [ref=e229]: 
+          - text: ORDERS
+      - listitem [ref=e230] [cursor=pointer]:
+        - button " Cart 2" [ref=e231]:
+          - generic [ref=e232]: 
+          - text: Cart
+          - generic [ref=e233]: "2"
+      - listitem [ref=e234] [cursor=pointer]:
+        - button "Sign Out" [ref=e235]:
+          - generic [aria-hidden] [ref=e236]: 
+          - text: Sign Out
+  - generic [ref=e237]:
+    - generic [ref=e238]:
+      - heading "My Cart" [level=1] [ref=e239]
+      - button "Continue Shopping❯" [ref=e240] [cursor=pointer]
+    - generic [ref=e241]:
+      - list [ref=e242]:
+        - listitem [ref=e243] [cursor=pointer]:
+          - generic [ref=e244]:
+            - generic [ref=e245]:
+              - paragraph [ref=e246]: "#6960eae1c941646b7a8b3ed3"
+              - heading "ADIDAS ORIGINAL" [level=3] [ref=e247]
+              - paragraph [ref=e248]: MRP $ 11500
+              - paragraph [ref=e249]: In Stock
+            - paragraph [ref=e251]: $ 11500
+            - generic [ref=e252]:
+              - button "Buy Now❯" [ref=e253]
+              - button "❯" [ref=e254]:
+                - generic [aria-hidden] [ref=e255]: 
+                - text: ❯
+      - list [ref=e256]:
+        - listitem [ref=e257] [cursor=pointer]:
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - paragraph [ref=e260]: "#6960eac0c941646b7a8b3e68"
+              - heading "ZARA COAT 3" [level=3] [ref=e261]
+              - paragraph [ref=e262]: MRP $ 11500
+              - paragraph [ref=e263]: In Stock
+            - paragraph [ref=e265]: $ 11500
+            - generic [ref=e266]:
+              - button "Buy Now❯" [ref=e267]
+              - button "❯" [ref=e268]:
+                - generic [aria-hidden] [ref=e269]: 
+                - text: ❯
+    - list [ref=e271]:
+      - listitem [ref=e272]:
+        - generic [ref=e273]: Subtotal
+        - generic [ref=e274]: $23000
+      - listitem [ref=e275]:
+        - generic [ref=e276]: Total
+        - generic [ref=e277]: $23000
+      - listitem [ref=e278]:
+        - button "Checkout❯" [ref=e279] [cursor=pointer]

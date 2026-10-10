@@ -1,0 +1,20 @@
+- generic [ref=e1133]:
+  - banner [ref=e1134]:
+    - generic [ref=e1135]:
+      - generic [ref=e1136]: GREENKART
+      - link "🎯 I’ll help you prepare for your next QA job — Explore the QA Career Accelerator." [ref=e1137] [cursor=pointer]:
+        - /url: https://rahulshettyacademy.com/qa-career-accelerator-job-ready
+      - link "🎯 I’ll help you prepare for your next QA job — Explore the QA Career Accelerator." [ref=e1138] [cursor=pointer]:
+        - /url: https://rahulshettyacademy.com/qa-career-accelerator-job-ready
+  - generic [ref=e1140]:
+    - generic [ref=e1141]:
+      - img "empty-cart" [ref=e1142]
+      - heading "You cart is empty!" [level=2] [ref=e1143]
+    - generic [ref=e1144]:
+      - generic [ref=e1145]:
+        - textbox "Enter promo code" [ref=e1146]
+        - button "Apply" [ref=e1147] [cursor=pointer]
+      - text: "No. of Items : null Total Amount :"
+      - generic [ref=e1148]: "null"
+      - text: "Discount : 0%Total After Discount : null"
+      - button "Place Order" [ref=e1149] [cursor=pointer]

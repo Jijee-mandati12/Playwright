@@ -1,0 +1,114 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e379]:
+    - navigation [ref=e381]:
+      - generic [ref=e383]:
+        - link "Automation Automation Practice":
+          - /url: ""
+          - generic [ref=e384] [cursor=pointer]:
+            - heading "Automation" [level=3] [ref=e385]
+            - paragraph [ref=e386]: Automation Practice
+      - text: 
+      - link "🎯 I'll help you prepare for your next QA job — Explore the QA Career Accelerator." [ref=e387] [cursor=pointer]:
+        - /url: https://rahulshettyacademy.com/qa-career-accelerator-job-ready
+      - list [ref=e388]:
+        - listitem [ref=e389] [cursor=pointer]:
+          - button " HOME" [ref=e390]:
+            - generic [ref=e391]: 
+            - text: HOME
+        - listitem
+        - listitem [ref=e392] [cursor=pointer]:
+          - button " ORDERS" [ref=e393]:
+            - generic [ref=e394]: 
+            - text: ORDERS
+        - listitem [ref=e395] [cursor=pointer]:
+          - button " Cart" [ref=e396]:
+            - generic [ref=e397]: 
+            - text: Cart
+        - listitem [ref=e398] [cursor=pointer]:
+          - button "Sign Out" [ref=e399]:
+            - generic [aria-hidden] [ref=e400]: 
+            - text: Sign Out
+    - table [ref=e402]:
+      - rowgroup [ref=e403]:
+        - row [ref=e404]:
+          - cell [ref=e405]:
+            - table [ref=e406]:
+              - rowgroup [ref=e407]:
+                - row [ref=e408]:
+                  - cell [ref=e409]
+                - row [ref=e410]:
+                  - cell [ref=e411]
+                - row [ref=e412]:
+                  - cell [ref=e413]
+                - row [ref=e414]:
+                  - cell [ref=e415]:
+                    - table [ref=e416]:
+                      - rowgroup [ref=e417]:
+                        - row [ref=e418]:
+                          - cell [ref=e419]:
+                            - table [ref=e420]:
+                              - rowgroup [ref=e421]:
+                                - row [ref=e422]:
+                                  - cell [ref=e423]:
+                                    - heading "Thankyou for the order." [level=1] [ref=e424]
+                                - row [ref=e425]:
+                                  - cell "You can see all the Orders in Orders History Page" [ref=e426]:
+                                    - text: You can see all the Orders in
+                                    - generic [ref=e427] [cursor=pointer]: Orders History Page
+                                - row [ref=e428]:
+                                  - cell "| 6aca2b942be7a4bc2b9ac826 | | 6aca2b942be7a4bc2b9ac829 |" [ref=e429]:
+                                    - generic [ref=e430]: "| 6aca2b942be7a4bc2b9ac826 |"
+                                    - generic [ref=e431]: "| 6aca2b942be7a4bc2b9ac829 |"
+                - row [ref=e432]:
+                  - cell [ref=e433]
+                - row [ref=e434]:
+                  - cell [ref=e435]:
+                    - table [ref=e436]:
+                      - rowgroup [ref=e437]:
+                        - row [ref=e438]:
+                          - cell [ref=e439]
+                        - generic [ref=e440]:
+                          - row [ref=e441]:
+                            - cell [ref=e442]:
+                              - img "Queen" [ref=e443]
+                            - 'cell "ADIDAS ORIGINAL Qty: 1" [ref=e444]':
+                              - generic [ref=e445]: ADIDAS ORIGINAL
+                              - generic [ref=e446]: "Qty: 1"
+                            - cell "$ 11500 Ready to Ship" [ref=e447]:
+                              - generic [ref=e448]: $ 11500
+                              - strong [ref=e450]: Ready to Ship
+                          - row [ref=e451]:
+                            - cell [ref=e452]:
+                              - img "Queen" [ref=e453]
+                            - 'cell "ZARA COAT 3 Qty: 1" [ref=e454]':
+                              - generic [ref=e455]: ZARA COAT 3
+                              - generic [ref=e456]: "Qty: 1"
+                            - cell "$ 11500 Ready to Ship" [ref=e457]:
+                              - generic [ref=e458]: $ 11500
+                              - strong [ref=e460]: Ready to Ship
+                        - row [ref=e461]:
+                          - cell "Items in your order may ship separately. View your order for shipping updates." [ref=e462]: Items in your order may ship separately.View your order for shipping updates.
+                        - row [ref=e463]:
+                          - button "Click To Download Order Details in CSV" [ref=e464] [cursor=pointer]
+                - row [ref=e465]:
+                  - cell [ref=e466]
+                - row [ref=e467]:
+                  - cell [ref=e468]:
+                    - table [ref=e469]:
+                      - rowgroup [ref=e470]:
+                        - row [ref=e471]:
+                          - cell [ref=e472]
+                        - row [ref=e473]:
+                          - cell "Questions? We're on call." [ref=e474]
+                        - row [ref=e475]:
+                          - cell "Monday to Friday 9am - 9pm" [ref=e476]
+                        - row [ref=e477]:
+                          - cell "Saturday to Sunday 10am - 6pm" [ref=e478]
+                        - row [ref=e479]:
+                          - cell "dummywebsite@rahulshettyacademy.com" [ref=e480]
+                        - row [ref=e481]:
+                          - cell [ref=e482]
+                - row [ref=e483]:
+                  - cell [ref=e484]
+                - row
+  - generic "Order Placed Successfully" [ref=e486] [cursor=pointer]
