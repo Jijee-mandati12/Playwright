@@ -1,7 +1,7 @@
 name: Playwright Tests
 on:
   push:
-    branches: [ main, master ]
+    branches: [ AI-MCP, main, master ]
   pull_request:
     branches: [ main, master ]
 jobs:
@@ -17,8 +17,20 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Verify test credentials are configured
+      env:
+        ECOM_USERNAME: ${{ secrets.ECOM_USERNAME }}
+        ECOM_PASSWORD: ${{ secrets.ECOM_PASSWORD }}
+      run: |
+        if [ -z "$ECOM_USERNAME" ] || [ -z "$ECOM_PASSWORD" ]; then
+          echo "Configure ECOM_USERNAME and ECOM_PASSWORD as repository Actions secrets."
+          exit 1
+        fi
     - name: Run Playwright tests
       run: npx playwright test
+      env:
+        ECOM_USERNAME: ${{ secrets.ECOM_USERNAME }}
+        ECOM_PASSWORD: ${{ secrets.ECOM_PASSWORD }}
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
